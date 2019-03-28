@@ -7,6 +7,19 @@
 #include "mmu.h"
 #include "proc.h"
 
+extern int readcount;
+int
+sys_readcount(void)
+{
+  return readcount;
+}
+
+int
+sys_wcupa(void)
+{
+  return 1871;
+}
+
 int
 sys_fork(void)
 {
